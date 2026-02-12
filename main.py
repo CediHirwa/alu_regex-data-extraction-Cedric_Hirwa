@@ -34,9 +34,10 @@ def run_extraction_tool(file_path):
         digits = re.sub(r'\D', '', card) 
         results["masked_credit_cards"].append(f"****-****-****-{digits[-4:]}")
 
+
     with open('output.json', 'w') as out_file:
-        json.dump(results, out_file, indent=4)
-    
+         json.dump(results, out_file, indent=4)
+
     print("Extraction complete. Results saved to 'output.json'.")
     return results
 

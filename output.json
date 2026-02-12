@@ -1,0 +1,32 @@
+{
+    "emails": [
+        "c.havugiman@alustudent.com",
+        "rw-finance@alu.edu",
+        "support@tech-hub.net",
+        "feedback.2024@gmail.co.uk"
+    ],
+    "urls": [
+        "https://malicious-hacker.net",
+        "https://supply-chain.africa"
+    ],
+    "currency": [
+        "$1,250.00",
+        "2,500,000 RWF",
+        "45000 RWF",
+        "15,200.50 RWF",
+        "\u20ac120.00",
+        "5000GBP",
+        "\u00a345.99",
+        "1200 EUR",
+        "$12,400.00",
+        "0.50 USD",
+        "\u20ac1,000,000.00"
+    ],
+    "masked_credit_cards": [
+        "****-****-****-4432",
+        "****-****-****-3456",
+        "****-****-****-9988",
+        "****-****-****-0000",
+        "****-****-****-4444"
+    ]
+}
